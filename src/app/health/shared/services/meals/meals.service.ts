@@ -30,4 +30,8 @@ export class MealsService {
     return this.authService.user.uid;
   }
 
+  addMeal(meal: Meal) {
+    return this.db.list<any>(`meals/${this.uid}`).push(meal);
+  }
+
 }

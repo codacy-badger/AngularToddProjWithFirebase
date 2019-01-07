@@ -14,7 +14,7 @@
             <img src="/assets/img/face.svg">
             No mealse, add a new meal to start
         </div>
-        <!-- meals ng for -->
+        <list-item *ngFor="let meal of meals" [item]="meal"></list-item>
     </div>
     <ng-template #loading>
         <div class="message">
